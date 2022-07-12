@@ -77,7 +77,7 @@ class StatsView @JvmOverloads constructor(
         }
 
         paint.color = colors.getOrNull(0) ?: randomColor()
-        canvas.drawArc(oval, -90F, 80F, false, paint)
+        canvas.drawArc(oval, -90F, 360F * data[0] - 10F, false, paint)
 
         canvas.drawText(
             "%.2f%%".format(data.sum() * 100),
